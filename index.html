@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>toothpaste-store — ยาสีฟันที่เรียบง่าย สะอาด และพิถีพิถัน</title>
+  <meta name="description" content="ยาสีฟันคุณภาพ 2 สูตร เย็นสดชื่นและสมุนไพรแท้">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* page-specific layout only; theme comes from style.css */
+    .hero-full {
+      min-height: calc(100vh - 5.5rem);
+      display: flex;
+      align-items: center;
+    }
+    .hero-full h1 { font-size: clamp(2.25rem, 6vw, 4rem); max-width: 18ch; }
+    .hero-full .hero-text { max-width: 52ch; }
+    .mood-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: var(--space-3);
+    }
+    .mood-card {
+      display: block;
+      padding: var(--space-4) var(--space-3);
+      background: var(--white);
+      border: var(--line);
+      color: var(--ink);
+      text-decoration: none;
+      transition: border-color 0.2s ease;
+    }
+    .mood-card:hover { border-color: var(--olive); }
+    .mood-card h3 { margin-bottom: 0; }
+    .mood-card p { margin: 0; font-size: 0.95rem; color: var(--taupe); }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">toothpaste-store</a>
+      <nav class="nav" aria-label="เมนูหลัก">
+        <a href="index.html" aria-current="page">หน้าแรก</a>
+        <a href="product.html">สินค้า</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero-full">
+      <div class="container">
+        <div>
+          <!-- คำโปรยแบรนด์: แก้ข้อความหัวข้อและคำบรรยายด้านล่างได้ตามต้องการ -->
+          <h1>ความสะอาดที่เรียบง่าย ในทุกวัน</h1>
+          <hr class="accent-line">
+          <p class="hero-text">ยาสีฟันคุณภาพ 2 สูตร ที่คัดสรรมาเพื่อการแปรงฟันที่สบาย สะอาด และเป็นส่วนหนึ่งของกิจวัตรที่คุณใส่ใจ</p>
+          <a class="btn" href="product.html">ดูสินค้าทั้งหมด</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>เลือกตามอารมณ์</h2>
+          <hr class="accent-line">
+          <p class="muted">เลือกความรู้สึกที่ใช่ แล้วดูสินค้าที่เข้ากับคุณ</p>
+        </div>
+
+        <div class="mood-grid">
+          <a class="mood-card" href="product.html?mood=fresh">
+            <div class="mood mood-fresh">Fresh</div>
+            <h3>สดชื่น</h3>
+            <p>เย็นสะอาด เริ่มวันอย่างโปร่งโล่ง</p>
+          </a>
+          <a class="mood-card" href="product.html?mood=sweet">
+            <div class="mood mood-sweet">Sweet</div>
+            <h3>ละมุน</h3>
+            <p>นุ่มนวล อ่อนโยนในทุกครั้งที่แปรง</p>
+          </a>
+          <a class="mood-card" href="product.html?mood=confident">
+            <div class="mood mood-confident">Confident</div>
+            <h3>มั่นใจ</h3>
+            <p>พร้อมยิ้มได้เต็มที่ในทุกโอกาส</p>
+          </a>
+          <a class="mood-card" href="product.html?mood=romance">
+            <div class="mood mood-romance">Romance</div>
+            <h3>อบอุ่น</h3>
+            <p>ความรู้สึกดีๆ ที่อยู่ใกล้ตัวคุณเสมอ</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; toothpaste-store</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
